@@ -6,16 +6,18 @@
   margin-top: 40px;
   margin-bottom: 40px;
 
-  color: blue;
-  background-color: grey;
+  color: white;
+  background-color: transparent;
 
   border-radius: 8px;
-
+  border: 1px solid rgb(89, 111, 212);
   padding: 15px 30px;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
-.button:hover,
-.button:focus {
-  box-shadow: white;
+.button:hover {
+  box-shadow: 0px 2px 10px 2px rgb(89, 111, 212);
+  color: rgb(89, 111, 212);
+  outline: none;
 }

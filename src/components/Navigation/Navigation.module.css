@@ -1,6 +1,7 @@
 .header {
   display: flex;
-  align-items: center;
+  align-items: start;
+  justify-content: left;
 
   padding-top: 20px;
   padding-bottom: 20px;
@@ -11,18 +12,10 @@
   border-bottom-right-radius: 10px;
 }
 
-.wrapper {
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .nav {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  align-items: start;
+  gap: 40px;
 }
 
 .link {
@@ -49,5 +42,5 @@
 
 .link:hover,
 .link:focus {
-  color: red;
+  color: rgb(89, 111, 212);
 }

@@ -1,0 +1,12 @@
+.img {
+  width: 100%;
+  height: auto;
+}
+.link {
+  color: white;
+  transition: all 0.3s;
+}
+
+.link:hover {
+  color: rgb(89, 111, 212);
+}

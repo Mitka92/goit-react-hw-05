@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import "./App.css";
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -8,12 +8,12 @@ const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 import Loader from "./components/Loader/Loader";
 import MovieCast from "./components/MovieCast/MovieCast";
 import MovieReviews from "./components/MovieReviews/MovieReviews";
-import Header from "./components/Header/Header";
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
   return (
     <>
-      <Header />
+      <Navigation />
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />

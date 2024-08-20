@@ -1,0 +1,18 @@
+.genres_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.genre {
+  margin: 0;
+}
+
+.title {
+  font-size: 32px;
+}
+.wrapper {
+  position: relative;
+}

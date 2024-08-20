@@ -6,9 +6,13 @@
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgb(89, 111, 212);
+  transition: all 0.3s;
+  scale: 1;
 }
 
 .item:hover,
 .item:focus {
   box-shadow: 0px 2px 10px 2px rgb(89, 111, 212);
+  color: rgb(89, 111, 212);
+  scale: 1.02;
 }

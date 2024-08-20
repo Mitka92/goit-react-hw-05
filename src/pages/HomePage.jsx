@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader/Loader";
 import { getPopularMovies } from "../services/api";
-import MoviesList from "../components/MoviesList/MoviesList";
+import MoviesList from "../components/MovieList/MovieList";
 import LoadMoreBtn from "../components/LoadMoreBtn/LoadMoreBtn";
 
 const HomePage = () => {

@@ -30,3 +30,17 @@ export async function searchMovie(query, page) {
   });
   return data;
 }
+export async function getReviews(id) {
+  const url = `https://api.themoviedb.org/3/movie/${id}/reviews`;
+  const { data } = await axios.get(url, {
+    ...options,
+  });
+  return data;
+}
+export async function getCast(id) {
+  const url = `https://api.themoviedb.org/3/movie/${id}/credits`;
+  const { data } = await axios.get(url, {
+    ...options,
+  });
+  return data;
+}

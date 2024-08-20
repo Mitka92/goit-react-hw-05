@@ -1,14 +1,13 @@
-import { useEffect, useRef, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Loader from "../components/Loader/Loader";
 import { getMovie } from "../services/api";
-import MovieDetails from "../components/MovieDeatails/MovieDetails";
+import MovieDetails from "../components/MovieDetails/MovieDetails";
 
 const MovieDetailsPage = () => {
   const [movie, setMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-
   const { movieId } = useParams();
 
   useEffect(() => {
