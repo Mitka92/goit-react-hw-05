@@ -1,6 +1,7 @@
 .content {
   font-size: 16px;
   padding: 10px;
+  text-align: left;
 }
 .author {
   display: flex;
