@@ -4,5 +4,23 @@
   justify-content: center;
 }
 .active {
-  color: red;
+  width: 80px;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 10px;
+}
+.link {
+  width: 80px;
+  text-align: center;
+  border: 1px solid blue;
+  border-radius: 4px;
+  padding: 10px;
+}
+.link:hover {
+  box-shadow: 0px 0px 2px 2px blue;
+}
+
+.active:hover {
+  box-shadow: 0px 0px 2px 2px red;
 }

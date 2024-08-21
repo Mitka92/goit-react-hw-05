@@ -2,11 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  justify-content: center;
+  justify-content: start;
 }
 .item {
   padding: 8px;
   border: 1px solid white;
-  width: 120px;
+  width: calc((100% - 28px) / 8);
   border-radius: 8px;
+  box-sizing: border-box;
+}
+.name {
+  margin: 0;
 }

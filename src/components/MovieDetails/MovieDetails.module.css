@@ -16,3 +16,6 @@
 .wrapper {
   position: relative;
 }
+.home_link:hover {
+  color: rgb(231, 100, 231);
+}

@@ -5,12 +5,13 @@
   font-size: 32px;
 }
 .select {
+  font-family: "Montserrat", sans-serif;
   color: white;
-  font-size: 32px;
+  font-size: 30px;
   background-color: transparent;
   border-radius: 5px;
   margin-right: 2%;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   width: auto;
   height: auto;
   cursor: pointer;
@@ -18,6 +19,7 @@
   outline: none;
   padding: 4px;
   text-align: center;
+  transition: all 0.3s;
 }
 
 select > option {
@@ -34,4 +36,7 @@ select > option:nth-child(1) {
 
 select > option:nth-last-child {
   background-color: #242424;
+}
+.select:hover {
+  border-color: rgb(84, 84, 185);
 }

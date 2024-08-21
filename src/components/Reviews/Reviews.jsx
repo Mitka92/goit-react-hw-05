@@ -13,19 +13,23 @@ const Reviews = ({ reviews }) => {
             id,
             author_details: { avatar_path },
           }) => (
-            <li key={id}>
-              <h3>{author}</h3>
-              <img
-                src={
-                  avatar_path
-                    ? `https://image.tmdb.org/t/p/w200${avatar_path}`
-                    : defaultAvatar
-                }
-                alt={author}
-                width={30}
-              />
-              <p className={css.content}>{content}</p>
-              <p>{created_at}</p>
+            <li key={id} className={css.item}>
+              <div className={css.wrapper}>
+                <div className={css.author}>
+                  <h4>{author}</h4>
+                  <img
+                    src={
+                      avatar_path
+                        ? `https://image.tmdb.org/t/p/w200${avatar_path}`
+                        : defaultAvatar
+                    }
+                    alt={author}
+                    width={50}
+                  />
+                </div>
+                <p className={css.content}>{content}</p>
+              </div>
+              <p>Date: {created_at}</p>
             </li>
           )
         )}

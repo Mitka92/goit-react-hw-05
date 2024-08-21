@@ -9,7 +9,7 @@ const TrendSwitcher = ({ value, onSelect }) => {
       <div className={css.wrapper}>
         <form className={css.form}>
           <label className={css.label} htmlFor={selectId}>
-            Trending to:{" "}
+            Trending for:{" "}
           </label>
           <select
             aria-label="select"

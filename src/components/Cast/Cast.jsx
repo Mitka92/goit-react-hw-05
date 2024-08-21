@@ -16,7 +16,7 @@ const Cast = ({ cast }) => {
               alt={name}
               width={50}
             />
-            <h3>{name}</h3>
+            <h4 className={css.name}>{name}</h4>
           </li>
         ))}
       </ul>

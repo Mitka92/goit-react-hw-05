@@ -40,7 +40,7 @@ const MovieDetails = ({
             ))}
           </ul>
           <p>{overview}</p>
-          <a href={homepage} target="_blank" rel="noopener noreferrer">
+          <a className={css.home_link} href={homepage} target="_blank" rel="noopener noreferrer">
             {homepage}
           </a>
           <p>{`Release date: ${release_date}`}</p>
