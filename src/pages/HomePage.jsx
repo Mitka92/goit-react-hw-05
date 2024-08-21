@@ -3,6 +3,7 @@ import Loader from "../components/Loader/Loader";
 import { getPopularMovies } from "../services/api";
 import MoviesList from "../components/MovieList/MovieList";
 import LoadMoreBtn from "../components/LoadMoreBtn/LoadMoreBtn";
+import TrendSwitcher from "../components/TrendSwitcher/TrendSwitcher";
 
 const HomePage = () => {
   const maxPage = 500;
@@ -16,13 +17,14 @@ const HomePage = () => {
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
   const [showBtn, setShowBtn] = useState(false);
+  const [trend, setTrend] = useState("day");
 
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
       setError(null);
       try {
-        const { results } = await getPopularMovies(page);
+        const { results } = await getPopularMovies(page, trend);
         if (page > 1) {
           const uniqueResults = results.filter(
             (movie, index, self) =>
@@ -40,12 +42,13 @@ const HomePage = () => {
       }
     };
     fetchData();
-  }, [page]);
+  }, [page, trend]);
   const loadMore = () => {
     setPage((page) => page + 1);
   };
   return (
     <>
+      <TrendSwitcher value={trend} onSelect={setTrend} />
       {movies.length > 0 && <MoviesList movies={movies} />}
       {showBtn && <LoadMoreBtn onClick={loadMore} />}
       {isLoading && <Loader />}

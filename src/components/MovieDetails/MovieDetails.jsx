@@ -3,7 +3,7 @@ import { GoBackBtn } from "../GoBackBtn/GoBackBtn";
 import { useRef } from "react";
 import { Container } from "../Container/Container";
 import css from "./MovieDetails.module.css";
-import MoreInfo from "../../pages/MoreInfo/MoreInfo";
+import MoreInfo from "../MoreInfo/MoreInfo";
 const MovieDetails = ({
   genres = [],
   overview,

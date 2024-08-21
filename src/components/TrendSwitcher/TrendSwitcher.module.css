@@ -1,0 +1,36 @@
+.form {
+  margin-top: 40px;
+}
+.label {
+  font-size: 32px;
+}
+.select {
+  font-size: 32px;
+  background-color: transparent;
+  border-radius: 5px;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  text-align: start;
+  outline: none;
+  padding: 4px;
+  text-align: center;
+}
+
+select > option {
+  background-color: #242424;
+  border: 0;
+  padding-right: 15px;
+  height: 31px;
+  width: 220px;
+}
+
+select > option:nth-child(1) {
+  background-color: #242424;
+}
+
+select > option:nth-last-child {
+  background-color: #242424;
+}

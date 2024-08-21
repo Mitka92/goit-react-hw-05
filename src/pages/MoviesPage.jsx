@@ -13,6 +13,8 @@ const MoviesPage = () => {
   const [page, setPage] = useState(1);
   const [showBtn, setShowBtn] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [isEmpty, setIsEmpty] = useState(false);
+
   const search = searchParams.get("query");
 
   useEffect(() => {
@@ -20,8 +22,14 @@ const MoviesPage = () => {
     const fetchData = async () => {
       setIsLoading(true);
       setError(null);
+      setIsEmpty(false);
       try {
         const { results, total_pages } = await searchMovie(search, page);
+        if (!results.length) {
+          setIsEmpty(true);
+          setMovies([]);
+          return;
+        }
         if (page > 1) {
           const uniqueResults = results.filter(
             (movie, index, self) =>
@@ -40,18 +48,22 @@ const MoviesPage = () => {
     };
     fetchData();
   }, [page, search]);
+
   const loadMore = () => {
     setPage((page) => page + 1);
   };
+
   const handleSubmit = (value) => {
     setSearchParams({ query: value });
   };
+
   return (
     <>
       {<SearchForm onSubmit={handleSubmit} />}
-      {movies.length > 0 && <MoviesList movies={movies} />}
+      {isEmpty && <span>{search} not found</span>}
+      {!isEmpty && <MoviesList movies={movies} />}
       {isLoading && <Loader />}
-      {showBtn && <LoadMoreBtn onClick={loadMore} />}
+      {showBtn && !isEmpty && <LoadMoreBtn onClick={loadMore} />}
       {error && <p>error</p>}
     </>
   );
